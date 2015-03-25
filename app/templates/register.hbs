@@ -28,6 +28,10 @@
       <footer>
         <button type="submit" class="btn btn-blue" {{action "signup"}} {{bind-attr disabled=submitting}}>Create Account</button>
       </footer>
+      <section class="meta">
+        Already have an account?
+        {{#link-to 'login'}}Log In{{/link-to}}
+      </section>
     </form>
   </div>
 </section>

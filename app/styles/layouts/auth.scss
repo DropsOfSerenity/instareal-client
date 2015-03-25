@@ -171,6 +171,7 @@
   min-width: 264px;
   color: lighten($midgrey, 15%);
   border-radius: 2px;
+  text-align: center;
 
   header {
     margin-bottom: 30px;
@@ -229,5 +230,20 @@
     margin: 0;
     width: 100%;
     margin-bottom: 1em;
+  }
+
+  .meta {
+    clear: both;
+    color: $midgrey;
+  }
+
+  a {
+    color: darken($midgrey, 10%);
+    font-size: 0.9em;
+
+    &:hover {
+      color: lighten($midgrey, 5%);
+      text-decoration: none;
+    }
   }
 }
