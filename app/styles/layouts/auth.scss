@@ -1,24 +1,10 @@
-// ------------------------------------------------------------
-// Authentication
-// Slug: /ghost/[signin/signup/forgotten/reset]
-//
-// Styles for the authentication pages
-//
-// * Auth colours & wrappers
-// * Sign In
-// * Signup & Reset
-// * Forgot Password
-// ------------------------------------------------------------
-
-
 //
 // Auth colours & wrappers
 // --------------------------------------------------
-
-.ghost-login,
-.ghost-signup,
-.ghost-forgotten,
-.ghost-reset {
+.instareal-login,
+.instareal-signup,
+.instareal-forgotten,
+.instareal-reset {
   color: $midgrey;
   background: $darkgrey;
 
@@ -48,7 +34,8 @@
   input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px $lightgrey inset !important;
   }
-}//.ghost-login, .ghost-signup, .ghost-forgotten, .ghost-reset
+}
+
 
 .login-box,
 .signup-box,
@@ -62,11 +49,6 @@
   text-align: center;
 }
 
-
-//
-// Sign In
-// Slug: /ghost/signin/
-// --------------------------------------------------
 
 .login-form {
   color: lighten($midgrey, 15%);
@@ -121,13 +103,6 @@
     }
   }
 }//.login-form
-
-
-//
-// Signup & Reset
-// Slug: /ghost/signup
-// Slug: /ghost/reset/t0k3n
-// --------------------------------------------------
 
 .signup-form,
 .reset-form {
@@ -191,33 +166,105 @@
   }
 }//.signup-form, .reset-form
 
+//
+// Page
+// --------------------------------------------------
+.instareal-setup {
+  color: $midgrey;
+  background: $darkgrey;
+
+  main {
+    padding-top: 15px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+  }
+}
+
 
 //
-// Forgot Password
-// Slug: /ghost/forgotten
+// Wrapper
+// --------------------------------------------------
+// Centered in the middle of the screen
+
+.setup-box {
+  display: table;
+  max-width: 500px;
+  height: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+//
+// Form
 // --------------------------------------------------
 
-.forgotten-form {
-  max-width: 280px;
+.setup-form {
+  max-width: 530px;
   color: lighten($midgrey, 15%);
-  display: table-cell;
-  vertical-align: middle;
+  border-radius: 2px;
+  padding: 15px;
 
-  .email-wrap {
-    position: relative;
-    margin: 0 0 1em 0;
-    float: left;
-    border-radius: 2px;
+  header {
+    margin-bottom: 30px;
+  }
+
+  label {
+    color: $lightgrey;
+    font-weight: 300;
     width: 100%;
   }
 
-  .email {
-    padding: 8px 10px;
-    border-radius: 2px;
+  .form-group input {
+    padding: 7px;
+    border: none;
+    color: #fff;
+    background: lighten($darkgrey, 10%);
+    transition: background 0.25s ease;
+
+    &:focus {
+      border:none;
+      background: lighten($darkgrey, 15%);
+    }
   }
 
-  button {
-    width: 100%;
-    height: 37px;
+  // Chrome auto-fill style
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $lightgrey inset !important;
   }
-}//.forgotten-form
+
+  h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 26px;
+    letter-spacing: 0;
+    color: $lightgrey;
+  }
+
+  h2 {
+    margin: 6px 0 0 0;
+    padding: 0;
+    border: none;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: $midgrey;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.4em;
+    color: $midgrey;
+  }
+
+  footer {
+    margin: 30px 0 5px 0;
+  }
+
+  .btn-blue {
+    width: 100%;
+    padding: 0.9em 1.8em;
+    font-size: 13px;
+  }
+}
