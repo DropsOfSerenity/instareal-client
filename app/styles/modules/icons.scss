@@ -106,7 +106,7 @@
 
 $i-lock:                \f023;
 $i-mail:                \f1fa;
-
+$i-person:              \f007;
 
 //
 // Icon Class Styles
@@ -133,19 +133,9 @@ $i-mail:                \f1fa;
 .icon-mail:before {
   content: '#{$i-mail}';
 }
-
-// Specific icon size adjustments
-.icon-list:before {
-  font-size: 0.9em;
+.icon-person:before {
+  content: '#{$i-person}';
 }
-.icon-markdown:before {
-  font-size: 1.1em;
-  vertical-align: -7%;
-}
-.icon-twitter:before {
-  font-size: 1.1em;
-}
-
 
 //
 // Div-based Icon Classes
