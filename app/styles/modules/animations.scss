@@ -1,16 +1,6 @@
-// ------------------------------------------------------------
-// Animations
-//
-// Keyframe animations used through Ghost
-//
-// * Define animations
-// * Classed to use these animations
-// ------------------------------------------------------------
-
 //
 // Define animations
 // --------------------------------------------------
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -54,11 +44,6 @@
     box-shadow: none;
   }
 }
-
-
-//
-// Classed to use these animations
-// --------------------------------------------------
 
 .fade-in {
   animation: fade-in 0.2s;
