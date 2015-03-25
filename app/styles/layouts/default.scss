@@ -1,0 +1,46 @@
+//
+// Main Layout
+// --------------------------------------------------
+// The <main> content wrapper
+
+.viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 500; // Above the .global-nav when collapsed
+  transition: transform $settings-menu-transition cubic-bezier($settings-menu-bezier);
+
+  @media (max-width: 900px) {
+    transition: transform 0.4s cubic-bezier($settings-menu-bezier);
+  }
+
+  // Compiles to `body.settings-menu-expanded .viewport`
+  body.global-nav-expanded & {
+    transform: translate3d(260px, 0px, 0px);
+  }
+
+  // Compiles to `body.settings-menu-expanded .viewport`
+  body.settings-menu-expanded & {
+    @media (max-width: 350px) {
+      transform: translate3d(-100%, 0px, 0px);
+    }
+
+    @media (min-width: 351px) {
+      transform: translate3d(-350px, 0px, 0px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        width: 1px;
+        background: #EDECE4;
+      }
+    }
+  }
+}//.viewport
