@@ -1,5 +1,5 @@
 import Ember from 'ember';
-// mixin used for routes to display a loading indicator when there is network activity
+
 var loaderOptions,
   loadingIndicator;
 
