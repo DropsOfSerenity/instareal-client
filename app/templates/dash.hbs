@@ -1,0 +1,23 @@
+<header class="page-header">
+  <button class="menu-button js-menu-button" {{action "toggleGlobalMobileNav"}}><span class="sr-only">Menu</span></button>
+  <h2 class="page-title">Dash</h2>
+</header>
+
+<div class="page-content">
+  <nav class="dash-nav js-settings-menu">
+    <header>
+      <h1>instareel.it</h1>
+    </header>
+    <ul>
+      <li>{{#link-to 'dash.hashtags' classNames="icon-instagram"}}Hashtags{{/link-to}}</li>
+      <li>{{#link-to 'dash.plan' classNames="icon-money"}}Plan{{/link-to}}</li>
+      <li>{{#link-to 'dash.account' classNames="icon-person"}}Account{{/link-to}}</li>
+    </ul>
+
+    <footer>
+      <p>Welcome example@email.com</p>
+    </footer>
+  </nav>
+
+  {{outlet}}
+</div>

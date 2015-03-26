@@ -1,10 +1,9 @@
 @font-face {
   font-family: 'Icons';
-  src:url('/fonts/fontawesome-webfont.woff') format('woff');
+  src: url('/fonts/fontawesome-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
 
 //
 // Base styled for icons
@@ -14,13 +13,12 @@
   font-weight: normal;
   font-style: normal;
   vertical-align: -3%;
-  text-transform:none;
+  text-transform: none;
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 //
 // The Icon (before) Mixin
@@ -40,7 +38,7 @@
   }
 
   &:hover {
-    text-decoration:none;
+    text-decoration: none;
   }
 }
 
@@ -62,17 +60,19 @@
   }
 
   &:hover {
-    text-decoration:none;
+    text-decoration: none;
   }
 }
-
 
 //
 // Icon Variables
 // --------------------------------------------------
-$i-lock:                \f023;
-$i-mail:                \f1fa;
-$i-person:              \f007;
+$i-lock: \f023;
+$i-mail: \f1fa;
+$i-person: \f007;
+$i-rightarrow: \f054;
+$i-money: \f0d6;
+$i-instagram: \f16d;
 
 //
 // Icon Class Styles
@@ -87,16 +87,23 @@ $i-person:              \f007;
   }
 }
 
-
 //
 // Icon Classes
 // --------------------------------------------------
 .icon-lock:before {
   content: '#{$i-lock}';
 }
+
 .icon-mail:before {
   content: '#{$i-mail}';
 }
+
 .icon-person:before {
   content: '#{$i-person}';
+}
+.icon-money:before {
+  content: '#{$i-money}';
+}
+.icon-instagram:before {
+  content: '#{$i-instagram}';
 }
